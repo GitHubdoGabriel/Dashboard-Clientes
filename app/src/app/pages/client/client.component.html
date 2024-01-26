@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<section class="dash_header">
+    <div>Total Clientes: {{ dataBase.length }}</div>
+    <div>Total Empreendimentos: {{ sumEnterprises(dataBase) }}</div>
+    <div>Total Imóveis/Unidades: {{ sumRealtiesGeneral(dataBase) }}</div>
+</section>
+
+<main class="table">
+    <section class="table_header">
+        <h2>Clientes</h2>
+
+        <div class="search">
+            <input class="search-input" type="text" placeholder="Localizar por Nome..."
+                (keyup)="updateFilter($event)" />
+            <span *ngIf="filter" (click)="cancelFilter()" class="cancel-filter">X</span>
+        </div>
+    </section>
+    <section class="table_body">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Imagem</th>
+                    <th>Quantidade de Empreendimentos</th>
+                    <th>Quantidade de Imóveis/Unidades</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of dataBase;let i = index;" (click)="openDetails(row)">
+                    <td>
+                        <span>{{ row._id }}</span>
+                    </td>
+                    <td>
+                        <span>{{ row.name }}</span>
+                    </td>
+                    <td>
+                        <span><img src="{{ row.image_src }}" alt=""></span>
+                    </td>
+                    <td>
+                        <span>{{ row.enterprises.length }}</span>
+                    </td>
+                    <td>
+                        <span>{{ sumRealties(row.enterprises) }}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>

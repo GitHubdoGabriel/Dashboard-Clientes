@@ -1,0 +1,43 @@
+<section class="section-1">
+    <div class="client-details">
+        <div class="id">
+            <span>ID</span>
+            {{ clientDetails._id }}
+        </div>
+        <div class="name">
+            <span>Nome</span>
+            {{ clientDetails.name }}
+        </div>
+        <div class="sum">
+            <span>Total de Empreendimentos</span>
+            {{ clientRealties.length }}
+        </div>
+        <div class="sum">
+            <span>Total de Imóveis/Unidades</span>
+            {{ calcRealties(clientRealties) }}
+        </div>
+    </div>
+    <div class="logo">
+        <img src="{{ clientDetails.image_src }}" alt="">
+    </div>
+</section>
+<section>
+    <h1>Imóveis</h1>
+    <div class="enterprises-realtie" *ngFor="let realtie of clientRealties; let i = index">
+        <div>
+            <span>ID</span>
+            {{ realtie._id }}
+        </div>
+        <div>
+            <img src="{{ realtie.image_src }}" alt="">
+        </div>
+        <div>
+            <span>Nome</span>
+            {{ realtie.name }}
+        </div>
+        <div>
+            <span>Total de Imóveis/Unidades</span>
+            {{ realtie.realties }}
+        </div>
+    </div>
+</section>
