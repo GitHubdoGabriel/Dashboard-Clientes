@@ -19,8 +19,6 @@ PS: **Corrija, anote os erros e mostre a lista no corpo do email de resposta ao 
 
 
 ### 4.2. Novas Features
-
-
 - **Na página de Clientes, o usuário deve visualizar os resultados na sua tela**.
 #  - Requisitar informações da api;
 #  - Retornar e exibir os campos: _id, nome, imagem, quantidade de empreendimentos e quantidade de imóveis/unidades de cada cliente.
@@ -47,12 +45,3 @@ PS: **Corrija, anote os erros e mostre a lista no corpo do email de resposta ao 
 Se você chegou até aqui, parabéns! Estamos quase terminando. Agora precisamos apenas garantir que sua api rodará em qualquer lugar usando Docker, mas existem algumas premissas:
 # - Você **deve usar** Docker Compose.
 # - Seu docker-compose.yml deve sincronizar/mapear as alterações do host com o volume do container.
- 
-
-
-## 6. Próximas Etapas
-- Seu código será analisado por nossa equipe e, em caso positivo, entraremos em contato para a última etapa da nossa análise técnica: um **hands-on** e um **quick questions** com um de nossos desenvolvedores.
-- Caso avance, você terá uma conversa com nossa gerente de pessoas e com nosso CTO e co-founder.
-- Caso avance, você terá uma conversa com nosso time de produto e desenvolvimento.
-- Caso avance, você terá uma conversa com nosso CEO e co-founder.
-- Caso avance, você receberá a proposta formal de trabalho e, caso aceite, você está dentro!!!
